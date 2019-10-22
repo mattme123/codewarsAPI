@@ -1,6 +1,5 @@
 ﻿using codeWarsAPI.DataAccess;
 using codeWarsAPI.Extensions;
-using codeWarsAPI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -31,8 +30,6 @@ namespace codeWarsAPI
                 .AllowCredentials();
             }));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddScoped<CodeWarsApiService>()
-                .AddScoped<UsersService>();
         }
         
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
